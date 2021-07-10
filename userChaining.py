@@ -21,6 +21,7 @@ class User:
             print(f"Transfering {amount} dollars from {self.name} to {other_user.name}")
             self.account_balance -= amount
             other_user.make_deposit(amount)
+            
         else:
             print(f"{self.name} does not have enough money to complete the transaction.  Sorry")
         return self
@@ -41,6 +42,7 @@ chris.transfer_money(jiraiya, 100).display_user_balance()
 jiraiya.display_user_balance()
 
 chris.transfer_money(misty, 100)
+
 
 chris.make_deposit(500).display_user_balance()
 misty.make_withdrawal(150).display_user_balance()
